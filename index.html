@@ -1,0 +1,68 @@
+<html style="background-color:black">
+<head>
+<h1 id="name" style="text-align:left; color:red; font-family:Ostrich Sans Medium; font-size:20em; text-shadow: 4px 2px #ffffcc;">Colin James Kurkowski</h1>
+</head>
+<body>
+<script>
+var r=255;
+var g=0;
+var b=0;
+function blend()
+{
+    var mix="rgb("+r+","+g+","+b+")";
+    document.getElementById("name").style.color = mix;
+    document.getElementById("desc").style.color = mix;
+    if(r==255&&g<255)
+       g++;
+    else if(r==255&&g==255&&b<255)
+       b++;
+    else if(b==255&&g==255&&r>0)
+       r--;
+    else if(r<255&&b>0&&g>0)
+    {
+       r++;
+       g--;
+       b--;
+    }
+}
+name.innerHTML=setInterval(blend,20);
+</script>
+<style>
+a:link {text-decoration: none; color: white;}
+a:visited {text-decoration: none; color:#ccccb3;}
+a:hover {text-decoration: none; color:#00cccc;}
+a:active {text-decoration: none; color:#666699;}
+div {white-space: nowrap;}
+</style>
+<div style="position: absolute;  left: 1400px; bottom: 700px;">
+<h1 style="color:white; font-family:Ostrich Sans Medium;">Projects:</h1>
+</div>
+<div style="position: absolute; left: 1400px; bottom: 600px;">
+<a href="https://store.steampowered.com/app/1343050/Duality_of_Doodles/" target="_blank">
+<h1 style="font-family:Ostrich Sans Medium;">Duality of Doodles</h1>
+</a>
+</div>
+<div style="position: absolute; left: 1400px; bottom: 500px;">
+<a href="https://venerable.itch.io/a-road-too-long" target="_blank">
+<h1 style="font-family:Ostrich Sans Medium;">A Road Too Long</h1>
+</a>
+</div>
+<div style="position: absolute; left: 1400px; bottom: 400px;">
+<a href="https://github.com/RoastedGameDev/Cluckin-Bell-Employee-Soundboard" target="_blank">
+<h1 style="font-family:Ostrich Sans Medium;">Cluckin' Bell Soundboard</h1>
+</a>
+</div>
+<div id="divExc" style="position: relative; left: 100px; bottom: 200px;">
+<h1 id="desc" style="color:white; font-family:Ostrich Sans Medium; font-size: 4em;">- Game/web developer and graphics programmer</h1>
+</div>
+<div style="position: absolute; left: 1400px; bottom: 300px;">
+<h1 style="color:white; font-family:Ostrich Sans Medium;">Contact:</h1>
+</div>
+<div style="position: absolute; left: 1400px; bottom: 200px;">
+<h1 style="font-family:Ostrich Sans Medium; color:white;">cjk2077@gmail.com</h1>
+</div>
+<div style="position: absolute; left: 1400px; bottom: 100px;">
+<h1 style="font-family:Ostrich Sans Medium; color:white;">progenitor6969@gmail.com</h1>
+</div>
+</body>
+</html>
