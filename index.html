@@ -1,0 +1,70 @@
+<html style="background-color:black">
+<head>
+<h1 id="name" style="text-align:left; color:red; font-size:20em; text-shadow: 4px 2px #ffffcc;">Colin James Kurkowski</h1>
+</head>
+<body>
+<script>
+var r=255;
+var g=0;
+var b=0;
+function blend()
+{
+    var mix="rgb("+r+","+g+","+b+")";
+    document.getElementById("name").style.color = mix;
+    document.getElementById("desc").style.color = mix;
+    if(r==255&&g<255)
+       g++;
+    else if(r==255&&g==255&&b<255)
+       b++;
+    else if(b==255&&g==255&&r>0)
+       r--;
+    else if(r<255&&b>0&&g>0)
+    {
+       r++;
+       g--;
+       b--;
+    }
+}
+name.innerHTML=setInterval(blend,20);
+</script>
+<style>
+a:link {text-decoration: none; color: white;}
+a:visited {text-decoration: none; color:#ccccb3;}
+a:hover {text-decoration: none; color:#00cccc;}
+a:active {text-decoration: none; color:#666699;}
+div {white-space: nowrap;}
+html {font-family: Ostrich Sans Medium, Tahoma;}
+@media only screen and (max-width: 750px){h1{font-size:90%;}}
+</style>
+<div style="position: absolute;  left: 73%; bottom: 85%;">
+<h1 style="color:white;">Projects:</h1>
+</div>
+<div style="position: absolute; left: 73%; bottom: 75%;">
+<a href="https://store.steampowered.com/app/1343050/Duality_of_Doodles/" target="_blank">
+<h1>Duality of Doodles</h1>
+</a>
+</div>
+<div style="position: absolute; left: 73%; bottom: 65%;">
+<a href="https://venerable.itch.io/a-road-too-long" target="_blank">
+<h1>A Road Too Long</h1>
+</a>
+</div>
+<div style="position: absolute; left: 73%; bottom: 55%;">
+<a href="https://github.com/RoastedGameDev/Cluckin-Bell-Employee-Soundboard" target="_blank">
+<h1>Cluckin' Bell Soundboard</h1>
+</a>
+</div>
+<div id="divExc" style="position: relative; left: 5%; bottom: 20%;">
+<h1 id="desc" style="color:white; font-size: 4em;">- Game/web developer and graphics programmer</h1>
+</div>
+<div style="position: absolute; left: 73%; bottom: 45%;">
+<h1 style="color:white;">Contact:</h1>
+</div>
+<div style="position: absolute; left: 73%; bottom: 35%;">
+<h1 style="color:white;">cjk2077@gmail.com</h1>
+</div>
+<div style="position: absolute; left: 73%; bottom: 25%;">
+<h1 style="color:white;">progenitor6969@gmail.com</h1>
+</div>
+</body>
+</html>
